@@ -11,6 +11,8 @@ import AppHeader from './Components/AppHeader';
 import BookingConfirmationScreen from './Components/BookingConfirmationScreen';
 import AgentBookingConfirmationScreen from './Components/AgentBookingConfirmationScreen';
 import { AuthProvider } from './Components/authContext';
+import { StatusBar } from 'expo-status-bar';
+
 
 
 const Stack = createStackNavigator();
@@ -19,6 +21,7 @@ const App = () => {
   return (
     <NavigationContainer>
        <AuthProvider>
+       <StatusBar style="light" backgroundColor="#ffc61a" />
       <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerMode: 'screen' }}>
         <Stack.Screen
           name="SplashScreen"
